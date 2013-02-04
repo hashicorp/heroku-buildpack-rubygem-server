@@ -16,3 +16,12 @@ $ heroku config:add BUILDPACK_URL=https://github.com/hashicorp/heroku-buildpack-
 ```
 
 And push! Your Heroku app is now a gem server.
+
+## Warning!
+
+This buildpack uses `gem server` to serve your gems. There is no authentication
+or protection against someone downloading all the gems served by this gem
+server as long as the URL is known.
+
+Therefore, corporate secrets and other such private things should not be
+put into this gem server.
