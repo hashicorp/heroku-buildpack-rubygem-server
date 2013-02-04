@@ -24,4 +24,4 @@ or protection against someone downloading all the gems served by this gem
 server as long as the URL is known.
 
 Therefore, corporate secrets and other such private things should not be
-put into this gem server.
+put into this gem server unless it is behind a trusted corporate firewall.
