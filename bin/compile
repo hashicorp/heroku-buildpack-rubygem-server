@@ -11,6 +11,8 @@ mkdir -p gems_home
 find . \
     -type f \
     -name '*.gem' \
+    -mindepth 1 \
+    -maxdepth 1 \
     -exec gem install '{}' \
     --local --no-ri --no-rdoc --ignore-dependencies \
     --install-dir ./gems_home \
