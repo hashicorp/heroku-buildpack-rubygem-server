@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# bin/release <build-dir>
+
+# Serve some gems up
+cat <<EOF
+---
+default_process_types:
+  web: gem server -d ./gems_home -p \$PORT --no-daemon
+EOF

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+# Work in the build directory
+cd $1
+
+# Make a directory to store the gems
+mkdir gems_home
+
+# Install all the gems in this folder
+find . \
+    -type f \
+    -name '*.gem' \
+    -exec gem install '{}' \
+    --local --no-ri --no-rdoc --ignore-dependencies \
+    --install-dir ./gems_home \
+    --force
